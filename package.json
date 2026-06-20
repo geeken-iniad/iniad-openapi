@@ -11,5 +11,12 @@
     "@typespec/openapi": "^1.13.0",
     "@typespec/openapi3": "^1.13.0",
     "vite-plus": "^0.2.1"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.5.3",
+      "onFail": "ignore"
+    }
   }
 }
