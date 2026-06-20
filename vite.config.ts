@@ -80,4 +80,24 @@ export default defineConfig({
     outDir: '../dist/docs',
     emptyOutDir: true,
   },
+  plugins: [
+    {
+      name: 'reload-on-openapi-change',
+      configureServer(server) {
+        const dir = server.config.publicDir
+        if (dir.length === 0) return
+
+        server.watcher.add(dir)
+
+        const reload = (path: string) => {
+          if (path.startsWith(dir) && path.endsWith('.yaml')) {
+            server.ws.send({ type: 'full-reload' })
+          }
+        }
+
+        server.watcher.on('add', reload)
+        server.watcher.on('change', reload)
+      },
+    },
+  ],
 })
