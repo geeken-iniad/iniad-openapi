@@ -6,5 +6,6 @@ output-dir: '{cwd}/dist'
 options:
   '@typespec/openapi3':
     emitter-output-dir: '{output-dir}/openapi'
+    output-file: '{service-name}.openapi.yaml'
     openapi-versions:
       - 3.1.0
