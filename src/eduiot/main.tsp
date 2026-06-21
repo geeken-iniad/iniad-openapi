@@ -4,6 +4,8 @@ import "@typespec/openapi";
 import "./routes/sensors.tsp";
 import "./routes/locker.tsp";
 import "./routes/iccards.tsp";
+import "./routes/doorlocks.tsp";
+import "./routes/lights.tsp";
 
 using TypeSpec.Http;
 using TypeSpec.OpenAPI;
