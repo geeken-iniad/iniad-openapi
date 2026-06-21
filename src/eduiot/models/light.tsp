@@ -31,7 +31,13 @@ enum LightMode {
 }
 
 @doc("照明情報")
-@example(#{ mode: LightMode.full, modes: #[LightMode.full, LightMode.off], room_num: "326", item_num: 1, device_type: "light" })
+@example(#{
+  mode: LightMode.full,
+  modes: #[LightMode.full, LightMode.off],
+  room_num: "326",
+  item_num: 1,
+  device_type: "light",
+})
 model Light {
   @doc("照明の現在状態。`modes` のうちいずれかの値となる")
   mode: LightMode;
