@@ -15,7 +15,7 @@ interface Lights {
     @doc("部屋番号")
     @path
     room_number: Models.RoomNumber,
-  ): url[];
+  ): url[] | Models.DeviceErrors;
 
   @summary("照明情報の取得")
   @doc("指定した部屋の指定した番号の照明の読み取り値を返す")
@@ -29,7 +29,7 @@ interface Lights {
     @doc("デバイス番号")
     @path
     item_number: int32,
-  ): Models.Light;
+  ): Models.Light | Models.DeviceErrors;
 
   @summary("照明の変更")
   @doc("指定した部屋の指定した番号の照明を変更する")
@@ -47,5 +47,5 @@ interface Lights {
     @doc("照明の状態。`modes` のうちいずれかの値を指定する")
     @example(Models.LightMode.full)
     mode: Models.LightMode,
-  ): Models.Light;
+  ): Models.Light | Models.DeviceErrors;
 }

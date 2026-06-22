@@ -1,3 +1,4 @@
+import "../models/common.tsp";
 import "../models/iccard.tsp";
 
 using TypeSpec.Http;
@@ -9,7 +10,7 @@ interface ICCards {
   @summary("IC カード情報の取得")
   @doc("自分の IC カードに関する情報を取得する")
   @get
-  list(): Models.ICCard[];
+  list(): Models.ICCard[] | Models.CommonErrors;
 
   @summary("IC カードの登録")
   @doc("自分の IC カード登録を追加する")
@@ -22,10 +23,10 @@ interface ICCards {
     @doc("IC カードに対するコメント")
     @example("comment")
     comment: string,
-  ): Models.ICCard;
+  ): Models.ICCard | Models.CommonErrors;
 
   @summary("IC カードの削除")
   @doc("自分の IC カード登録を削除する")
   @delete
-  delete(): void;
+  delete(): void | Models.CommonErrors;
 }

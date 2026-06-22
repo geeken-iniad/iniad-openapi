@@ -15,7 +15,7 @@ interface Doorlocks {
     @doc("部屋番号")
     @path
     room_number: Models.RoomNumber,
-  ): url[];
+  ): url[] | Models.DeviceErrors;
 
   @summary("電気錠情報の取得")
   @doc("指定した部屋の指定した番号の電気錠の読み取り値を返す")
@@ -29,7 +29,7 @@ interface Doorlocks {
     @doc("デバイス番号")
     @path
     item_number: int32,
-  ): Models.Doorlock;
+  ): Models.Doorlock | Models.DeviceErrors;
 
   @summary("電気錠の開錠・施錠")
   @doc("指定した部屋の指定した番号の電気錠を開錠・施錠する")
@@ -47,5 +47,5 @@ interface Doorlocks {
     @doc("ドア錠の施錠状態")
     @example(true)
     locked: boolean,
-  ): Models.Doorlock;
+  ): Models.Doorlock | Models.DeviceErrors;
 }

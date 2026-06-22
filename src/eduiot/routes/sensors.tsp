@@ -14,5 +14,5 @@ interface Sensors {
     @doc("部屋番号")
     @path
     room_number: Models.RoomNumber,
-  ): Models.Sensor[];
+  ): Models.Sensor[] | Models.RoomErrors;
 }
