@@ -31,3 +31,8 @@ INIAD が提供する API の非公式 OpenAPI 仕様書です。
 - `vpr build`: TypeSpec をコンパイルし、ドキュメントページをビルドします
 - `vpr check`: format, lint のチェックを行います (TypeSpec, Oxfmt, Oxlint)
 - `vpr fix`: format, lint の修正を行います (TypeSpec, Oxfmt, Oxlint)
+
+## Contributing
+
+この仕様書は公式ドキュメントや実際の API の挙動を確認しながら作成しています。
+誤り等を見つけたら、確認したリクエストとレスポンスを添えて Issue や PR で報告してください。
