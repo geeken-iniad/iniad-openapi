@@ -4,7 +4,7 @@ namespace INIAD.EduIot.Models;
 @example(#{
   open: false,
   locked: true,
-  room_num: "326",
+  room_num: "3201",
   item_num: 1,
   device_type: "doorlock",
 })
@@ -16,7 +16,7 @@ model Doorlock {
   locked: boolean;
 
   @doc("設置されている部屋の番号")
-  room_num: string;
+  room_num: RoomNumber;
 
   @doc("設置されている部屋におけるデバイス番号")
   item_num: int32;

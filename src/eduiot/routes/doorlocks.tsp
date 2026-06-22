@@ -1,3 +1,4 @@
+import "../models/common.tsp";
 import "../models/doorlock.tsp";
 
 using TypeSpec.Http;
@@ -13,7 +14,7 @@ interface Doorlocks {
   list(
     @doc("部屋番号")
     @path
-    room_number: string,
+    room_number: Models.RoomNumber,
   ): url[];
 
   @summary("電気錠情報の取得")
@@ -23,7 +24,7 @@ interface Doorlocks {
   get(
     @doc("部屋番号")
     @path
-    room_number: string,
+    room_number: Models.RoomNumber,
 
     @doc("デバイス番号")
     @path
@@ -37,7 +38,7 @@ interface Doorlocks {
   update(
     @doc("部屋番号")
     @path
-    room_number: string,
+    room_number: Models.RoomNumber,
 
     @doc("デバイス番号")
     @path

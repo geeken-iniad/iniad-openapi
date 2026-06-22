@@ -16,10 +16,14 @@ enum SensorType {
 }
 
 @doc("センサの計測値")
-@example(#{ room_num: 1, sensor_type: SensorType.temperature, value: 30.9 })
+@example(#{
+  room_num: "3201",
+  sensor_type: SensorType.temperature,
+  value: 26.0,
+})
 model Sensor {
   @doc("部屋番号")
-  room_num: int32;
+  room_num: RoomNumber;
 
   @doc("センサの種類")
   sensor_type: SensorType;

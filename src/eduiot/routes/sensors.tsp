@@ -1,3 +1,4 @@
+import "../models/common.tsp";
 import "../models/sensor.tsp";
 
 using TypeSpec.Http;
@@ -12,6 +13,6 @@ interface Sensors {
   get(
     @doc("部屋番号")
     @path
-    room_number: int32,
+    room_number: Models.RoomNumber,
   ): Models.Sensor[];
 }

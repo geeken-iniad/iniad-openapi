@@ -34,7 +34,7 @@ enum LightMode {
 @example(#{
   mode: LightMode.full,
   modes: #[LightMode.full, LightMode.off],
-  room_num: "326",
+  room_num: "3201",
   item_num: 1,
   device_type: "light",
 })
@@ -46,7 +46,7 @@ model Light {
   modes: LightMode[];
 
   @doc("設置されている部屋の番号。屋上の場合は `6000`")
-  room_num: string;
+  room_num: RoomNumber;
 
   @doc("設置されている部屋におけるデバイス番号")
   item_num: int32;
