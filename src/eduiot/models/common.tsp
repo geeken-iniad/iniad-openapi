@@ -46,7 +46,7 @@ model NotFoundError {
 }
 
 @error
-@doc("リクエストが多すぎる (短時間の連続アクセスによるレート制限)")
+@doc("レート制限、または INIAD Wi-Fi 外からのアクセス")
 model ServiceUnavailableError {
   @statusCode statusCode: 503;
   ...ErrorFields;
